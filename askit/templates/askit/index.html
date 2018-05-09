@@ -1,0 +1,24 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'askit/style.css' %}" />
+
+<div class="main-container">
+	<div class="header">Welcome to the QnA</div>
+	<div class="sub-header">Questions Posted</div>
+</div>
+
+<div class="content-list">
+{% if question_list %}
+	{% for question in question_list %}
+	<ul>
+	<div class="list">
+		<li> <a href="{{question.id}}">{{question.title}}</a> --- {{ question.post_date }} , {{question.posted_by}}</li>
+	</div>
+		<br>
+	</ul>
+	{% endfor %}
+{% endif %}
+</div>
+
+<div class="prompt">
+	<a href="{% url 'askit:add_question' %}">Post new question?</a>
+</div>

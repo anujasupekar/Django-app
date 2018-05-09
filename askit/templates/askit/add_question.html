@@ -1,0 +1,17 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'askit/style.css' %}" />
+
+<div class="container">
+	<div class=sub-header>Enter your question below:</div>
+</div>
+
+<div class="input-text">
+	<form action="{% url 'askit:save_question' %}" method="post">
+	{% csrf_token %}
+	<textarea name="question" rows="5" cols="30"></textarea>
+	<br>
+	<input type="text" name="writer" placeholder="Enter your name">
+	<br>
+	<input type="submit" value="Post!">
+	</form>
+</div>

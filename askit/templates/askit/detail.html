@@ -1,0 +1,37 @@
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'askit/style.css' %}" />
+<script src="https://code.jquery.com/jquery-1.8.3.min.js" crossorigin="anonymous"></script>
+<script src="{% static 'askit/main.js' %}"></script>
+
+<div class="container">
+	<span class='question-title'>{{ question.title }}</span>
+		<div class="vote-buttons">
+			<button type="button" id="upvoteBtn" name="votes" value="upvote">Upvote</button>({{ question.upvotes }})
+			<button type="button" id="downvoteBtn" name="votes" value="downvote">Downvote</button>({{ question.downvotes }})
+		</div>
+
+	<div class="sub-header">Answers:</div>
+</div>
+
+<div class="content-list">
+{% for ans in question.answer_set.all %}
+	{% if ans %}
+		<ul>
+		<div class="list">
+	  	<li>{{ ans.answer }} --- {{ ans.written_by }} ,{{ ans.post_date }}</li>
+	  	</div>
+		</ul> 
+	{% endif %}
+{% endfor %}
+</div>
+
+<div class="prompt">
+	<a href="{% url 'askit:add_answer' question.id %}">Add an answer</a>
+</div>
+
+<script>
+ url_vote = "{% url 'askit:vote' question.id %}";
+ redirect_url = "{% url 'askit:detail' question.id %}"
+ csrf_token = '{{ csrf_token }}';
+</script>
