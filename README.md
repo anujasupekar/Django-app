@@ -27,3 +27,16 @@ Overview:
   + The path for static files is askit/static/askit/static_file
   
  The default SQLite database is used.
+
+Screenshots of the application:
+1. GET list of questions
+![alt text](https://github.com/anujasupekar/Django-app/blob/master/screenshots/GET%20list%20of%20questions%20(homepage).png)
+
+2. GET details of a specific question
+![alt text](https://github.com/anujasupekar/Django-app/blob/master/screenshots/GET%20question%20detail.png)
+
+3. POST a new answer for a specific question
+![alt text](https://github.com/anujasupekar/Django-app/blob/master/screenshots/POST%20new%20answer.png)
+
+4. POST a new question
+![alt text](https://github.com/anujasupekar/Django-app/blob/master/screenshots/POST%20new%20question.png)
