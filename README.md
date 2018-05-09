@@ -1,14 +1,14 @@
 # Django-app
 
 ### This is a Django application which is a QnA(Question and Answer) site. 
-Following is the overview:
+Overview:
 
 **Models** [models.py](https://github.com/anujasupekar/Django-app/blob/master/askit/models.py)
   + There are 2 models, Question model and Answer model
-  + Answer model has question as a foreign key
+  + Answer model has question as the foreign key
   
 **Views** [views.py](https://github.com/anujasupekar/Django-app/blob/master/askit/views.py)
-  + There are views for following features,
+  There are views for following features,
   + GET list of questions
   + GET details of a specific question
   + POST a new question
