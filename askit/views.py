@@ -3,7 +3,6 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from .models import Question, Answer
 from django.utils import timezone
-from .forms import QuestionForm
 
 
 def question_list(request):
